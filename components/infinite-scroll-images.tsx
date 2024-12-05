@@ -1,7 +1,6 @@
 "use client";
 
 import { motion } from "framer-motion";
-import Image from 'next/image';
 
 const workImages = [
   {
@@ -37,64 +36,5 @@ const workImages = [
 ];
 
 export function InfiniteScrollImages() {
-  const images = workImages.map((image, index) => ({
-    src: image.url,
-    alt: image.alt,
-  }));
-
-  return (
-    <div className="relative overflow-hidden w-full">
-      <motion.div 
-        className="flex"
-        animate={{
-          x: ['-100%', '0%'],
-          transition: {
-            x: {
-              repeat: Infinity,
-              repeatType: 'loop',
-              duration: 20,
-              ease: 'linear'
-            }
-          }
-        }}
-      >
-        <div className="flex space-x-4 py-4">
-          {images.map((image, index) => (
-            <motion.div
-              key={index}
-              className="flex-shrink-0 w-64 h-48 overflow-hidden rounded-lg shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={256}
-                height={192}
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          ))}
-        </div>
-        <div className="flex space-x-4 py-4">
-          {images.map((image, index) => (
-            <motion.div
-              key={index}
-              className="flex-shrink-0 w-64 h-48 overflow-hidden rounded-lg shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              transition={{ duration: 0.3 }}
-            >
-              <Image
-                src={image.src}
-                alt={image.alt}
-                width={256}
-                height={192}
-                className="w-full h-full object-cover"
-              />
-            </motion.div>
-          ))}
-        </div>
-      </motion.div>
-    </div>
-  );
+  return null;
 }
