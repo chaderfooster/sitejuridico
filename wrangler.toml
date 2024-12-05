@@ -4,6 +4,3 @@ environment = "production"
 
 [vars]
 NODE_VERSION = "20.0.0"
-
-[dev]
-port = 3000
