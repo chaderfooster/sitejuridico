@@ -549,7 +549,7 @@ function TestimonialsSection() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                "{review.text}"
+                &quot;{review.text}&quot;
               </motion.p>
               <motion.div 
                 className="mt-4 flex items-center text-sm text-gray-500"
