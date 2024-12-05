@@ -4,13 +4,13 @@
   "private": true,
   "engines": {
     "node": ">=20.0.0",
-    "npm": ">=9.6.7"
+    "npm": "9.6.7"
   },
   "packageManager": "npm@9.6.7",
   "scripts": {
-    "preinstall": "npx only-allow npm",
-    "predev": "node --version && npm --version",
-    "prebuild": "node --version && npm --version",
+    "preinstall": "npx only-allow npm && npm install -g npm@9.6.7",
+    "predev": "npm --version && node --version",
+    "prebuild": "npm --version && node --version",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
