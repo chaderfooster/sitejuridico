@@ -4,3 +4,6 @@ environment = "production"
 
 [vars]
 NODE_VERSION = "20.0.0"
+
+[pages_build_output_dir]
+dir = ".next"
