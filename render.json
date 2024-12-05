@@ -1,0 +1,14 @@
+{
+  "buildCommand": "npm run build",
+  "startCommand": "npm run start",
+  "envVars": {
+    "NODE_VERSION": "20.x"
+  },
+  "routes": [
+    {
+      "type": "rewrite",
+      "source": "/*",
+      "destination": "/index.html"
+    }
+  ]
+}
