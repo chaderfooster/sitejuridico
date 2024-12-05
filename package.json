@@ -8,6 +8,9 @@
   },
   "packageManager": "npm@9.6.7",
   "scripts": {
+    "preinstall": "npx only-allow npm",
+    "predev": "node --version && npm --version",
+    "prebuild": "node --version && npm --version",
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
