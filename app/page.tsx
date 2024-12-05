@@ -16,6 +16,7 @@ import { InfiniteScrollImages } from "@/components/infinite-scroll-images";
 import { Navbar } from "@/components/navbar";
 import { FaClock, FaComments, FaPhone, FaBriefcase, FaLaptop, FaCreditCard, FaBalanceScale, FaBuilding, FaShieldAlt, FaUserShield, FaCheckCircle, FaTrophy, FaChartLine, FaUserFriends } from 'react-icons/fa';
 import { useState } from 'react';
+import Image from 'next/image';
 
 function LegalServicesSection() {
   const openWhatsApp = () => {
@@ -38,9 +39,11 @@ function LegalServicesSection() {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-          <img 
-            src="/images/legal-services/gettyimages-1292362577-2048x2048.jpg" 
-            alt="Serviços Jurídicos em Cuiabá" 
+          <Image
+            src="/images/legal-services/gettyimages-1292362577-2048x2048.jpg"
+            alt="Serviços Jurídicos em Cuiabá"
+            width={600}
+            height={400}
             className="w-full h-full object-cover transition-transform duration-300"
           />
         </motion.div>
@@ -402,9 +405,11 @@ function AboutUsSection() {
             viewport={{ once: true }}
             className="relative group"
           >
-            <img 
+            <Image 
               src="/images/legal-services/photo-1589829545856-d10d557cf95f.jpg" 
               alt="Escritório de Advocacia" 
+              width={600}
+              height={400}
               className="w-full h-[500px] object-cover rounded-xl shadow-lg transition-transform group-hover:scale-105"
             />
             <motion.div 
@@ -541,7 +546,7 @@ function TestimonialsSection() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.5 }}
               >
-                "{review.text}"
+                &quot;{review.text}&quot;
               </motion.p>
               <motion.div 
                 className="mt-4 flex items-center text-sm text-gray-500"
@@ -708,7 +713,9 @@ function Hero() {
             animate={{ scale: 1, opacity: 1 }}
             exit={{ scale: 0.9, opacity: 0 }}
           >
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">Consulta e Orçamento Jurídico</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">
+              Consulta e Orçamento Jurídico
+            </h2>
             <p className="text-gray-700 mb-4">
               Na Soares Lacerda Advogados, realizamos uma consulta inicial para avaliar sua situação jurídica. 
               Após essa análise preliminar, apresentaremos um orçamento detalhado e transparente.
