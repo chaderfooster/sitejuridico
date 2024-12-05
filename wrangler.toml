@@ -2,11 +2,8 @@
 command = "npm run build"
 environment = "production"
 
-[build.environment]
+[vars]
 NODE_VERSION = "20.0.0"
 
 [dev]
 port = 3000
-
-[vars]
-NODE_VERSION = "20.0.0"
