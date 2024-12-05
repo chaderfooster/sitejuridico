@@ -16,6 +16,8 @@ import { InfiniteScrollImages } from "@/components/infinite-scroll-images";
 import { Navbar } from "@/components/navbar";
 import { FaClock, FaComments, FaPhone, FaBriefcase, FaLaptop, FaCreditCard, FaBalanceScale, FaBuilding, FaShieldAlt, FaUserShield, FaCheckCircle, FaTrophy, FaChartLine, FaUserFriends } from 'react-icons/fa';
 import { useState } from 'react';
+import Image from 'next/image';
+import Link from 'next/link';
 
 function LegalServicesSection() {
   const openWhatsApp = () => {
@@ -38,9 +40,11 @@ function LegalServicesSection() {
           whileHover={{ scale: 1.05 }}
           transition={{ duration: 0.3 }}
         >
-          <img 
+          <Image 
             src="/images/legal-services/gettyimages-1292362577-2048x2048.jpg" 
             alt="Serviços Jurídicos em Cuiabá" 
+            width={1024}
+            height={1024}
             className="w-full h-full object-cover transition-transform duration-300"
           />
         </motion.div>
@@ -402,9 +406,11 @@ function AboutUsSection() {
             viewport={{ once: true }}
             className="relative group"
           >
-            <img 
+            <Image 
               src="/images/legal-services/photo-1589829545856-d10d557cf95f.jpg" 
               alt="Escritório de Advocacia" 
+              width={1024}
+              height={1024}
               className="w-full h-[500px] object-cover rounded-xl shadow-lg transition-transform group-hover:scale-105"
             />
             <motion.div 
@@ -496,9 +502,11 @@ function TestimonialsSection() {
               whileTap={{ scale: 0.95 }}
             >
               <div className="flex items-center mb-4">
-                <motion.img 
+                <Image 
                   src={review.avatar} 
                   alt={review.name} 
+                  width={48}
+                  height={48}
                   className="w-12 h-12 rounded-full mr-4"
                   initial={{ scale: 0 }}
                   animate={{ scale: 1 }}

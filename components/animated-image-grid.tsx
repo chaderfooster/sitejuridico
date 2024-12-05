@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from 'next/image';
 
 // Additional work environment images
 const allWorkImages = [
@@ -87,9 +88,11 @@ export function AnimatedImageGrid() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <img
+              <Image
                 src={image.url}
                 alt={image.alt}
+                width={600}
+                height={400}
                 className={`w-full object-cover ${image.className}`}
               />
             </motion.div>
@@ -107,9 +110,11 @@ export function AnimatedImageGrid() {
               exit={{ opacity: 0 }}
               transition={{ duration: 0.5 }}
             >
-              <img
+              <Image
                 src={image.url}
                 alt={image.alt}
+                width={600}
+                height={400}
                 className={`w-full object-cover ${image.className}`}
               />
             </motion.div>
