@@ -1,8 +1,0 @@
-[build]
-command = "npm run build"
-
-[pages_build_output_dir]
-path = ".next"
-
-[env.production]
-NODE_VERSION = "20.0.0"
